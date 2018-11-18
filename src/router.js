@@ -5,7 +5,7 @@ import MovieDetail from './views/Movie/MovieDetail.vue'
 import Book from './views/Book/Book.vue'
 import Music from './views/Music/Music.vue'
 import MusicDetail from './views/Music/MusicDetail.vue'
-import Photo from './views/Photo/Photo.vue'  //引进名叫Photo的组件
+import Translate from './views/Translate/Translate.vue'  //引进名叫Translate的组件
 
 
 Vue.use(Router)
@@ -45,9 +45,9 @@ export default new Router({
     },
     
     {
-      path:'/photo',
-      name:'photo',
-      component:Photo
+      path:'/translate',
+      name:'translate',
+      component:Translate
     },
   ]
     

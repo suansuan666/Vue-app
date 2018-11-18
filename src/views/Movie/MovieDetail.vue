@@ -3,7 +3,7 @@
         <!-- <img :src="itemList.images.large"> -->
         <div class="intro">
             <h3>{{itemList.title}}</h3>
-            <h5>原名：{{itemList.original_title}}</h5>
+            <h5>又名：{{itemList.original_title}}</h5>
             <h6>豆瓣评分：{{itemList.rating.average}}</h6>
             <p>介绍：{{itemList.summary}}</p>
         </div>
@@ -11,7 +11,6 @@
 </template>
 <script>
 import axios from 'axios';
-import Axios from 'axios';
 export default {
     data(){
         return{
@@ -33,7 +32,7 @@ export default {
     padding: .2rem;
 }
 h3{
-    margin:0 auto;
+   /* text-align: center; */
     display: block;
 }
 h6{

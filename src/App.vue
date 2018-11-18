@@ -52,8 +52,8 @@ data(){
     {
       title:"翻译",
       bgcolor:"rgb(63, 81, 181)",
-      name:'photo',
-      path:'/photo'
+      name:'translate',
+      path:'/translate'
     } 
     ],
     selectMenu:{}  ,  //定义一个当前选中的菜单的对象，并设置为空

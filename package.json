@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "md5": "^2.2.1",
     "swiper": "^4.4.2",
     "vue": "^2.5.17",
     "vue-aplayer": "^1.6.1",
