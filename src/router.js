@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Movie from './views/Movie/Movie.vue'
+import MovieDetail from './views/Movie/MovieDetail.vue'
 import Book from './views/Book/Book.vue'
 import Music from './views/Music/Music.vue'
+import MusicDetail from './views/Music/MusicDetail.vue'
 import Photo from './views/Photo/Photo.vue'  //引进名叫Photo的组件
 
 
@@ -22,6 +24,16 @@ export default new Router({
       component:Movie
     },
     {
+      path:'/movieDetail',
+      name:'movieDetail',
+      component:MovieDetail
+    },
+    {
+      path:'/musicDetail',
+      name:'musicDetail',
+      component:MusicDetail
+    },
+    {
       path:'/book',
       name:'book',
       component:Book
@@ -31,6 +43,7 @@ export default new Router({
       name:'music',
       component:Music
     },
+    
     {
       path:'/photo',
       name:'photo',

@@ -1,6 +1,7 @@
 <template>
+
     <footer>
-        <ul class="foot" :style="{background:bgcolor}">
+        <ul class="foot" :style="{background: footBgcolor}">
             <li v-for="(item,index) in menuList" :key="index" class="foot-menu" @click="selectMenu(item)">
                <router-link :to="item.path">{{item.title}}</router-link>    //router-link相当于一个a标签
                 
@@ -12,10 +13,11 @@
 export default {
     data(){
         return{
-            bgcolor:''
+            bgcolor:'',
+            footBgcolor1:''
         }
     },
-    props:['menuList'],
+    props:['menuList','footBgcolor'],
     methods:{
         selectMenu(item){
             this.bgcolor=item.bgcolor;

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <Head :selectMenu="selectMenu"></Head>
-    <router-view class="content"/>
-    <Foot :menuList="menuList" @changeTitle="changeTitle"></Foot>
+    <router-view class="content" @switchTab="switchTab"/>
+    <Foot :menuList="menuList" @changeTitle="changeTitle" :footBgcolor="selectMenu.bgcolor"></Foot>
   </div>
 </template>
 
@@ -18,6 +18,14 @@ export default {
 methods:{
     changeTitle(item){
       this.selectMenu=item;
+    },
+    switchTab(itemName){
+      this.menuList.forEach(item => {
+        if(item.name==itemName){
+          this.selectMenu=item;
+          // this.footBgcolor=item.bgcolor;
+        }
+      });
     }
 },
 data(){
@@ -42,14 +50,14 @@ data(){
       path:'/book'
     },
     {
-      title:"图片",
+      title:"翻译",
       bgcolor:"rgb(63, 81, 181)",
       name:'photo',
       path:'/photo'
     } 
     ],
-    selectMenu:{}    //定义一个当前选中的菜单的对象，并设置为空
-
+    selectMenu:{}  ,  //定义一个当前选中的菜单的对象，并设置为空
+       
    
 }
 }
